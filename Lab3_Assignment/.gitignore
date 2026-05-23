@@ -1,0 +1,42 @@
+# Data files (trop volumineux)
+data/input/*.parquet
+data/output/*.csv
+data/output/*.parquet
+
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Spark
+.spark/
+metastore_db/
+derby.log
+*.jks
+
+# Jupyter
+.jupyter/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+ENV/

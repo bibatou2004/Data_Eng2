@@ -1,0 +1,7 @@
+=== PLAN D'EXÉCUTION DU STREAMING ===
+
+Schéma de sortie:
+StructType([StructField('start', TimestampType(), True), StructField('end', TimestampType(), True), StructField('game_type', StringType(), True), StructField('nb_matches', LongType(), False), StructField('avg_duration_sec', DoubleType(), True), StructField('avg_spectators', DoubleType(), True), StructField('max_spectators', IntegerType(), True), StructField('min_duration_sec', IntegerType(), True)])
+
+Note: Le plan détaillé est affiché dans la sortie console ci-dessus.
+Utilisez windowed.explain('formatted') pour voir le plan complet.

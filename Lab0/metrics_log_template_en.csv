@@ -1,0 +1,2 @@
+Timestamp,Job_ID,Task_Count,Input_Size_MB,Output_Size_MB,Shuffle_Read_MB,Shuffle_Write_MB,Duration_Seconds,Notes
+2025-12-07T13:30:39.897745,1,4,0.001,0.001,0.0,0.0,2.5,groupBy aggregation on sample_sales.csv

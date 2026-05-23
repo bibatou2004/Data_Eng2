@@ -1,0 +1,6 @@
+id,category,value,text
+1,A,100,hello world spark programming
+2,B,200,data engineering with pyspark
+3,A,150,hello spark hello world
+4,C,300,machine learning and big data
+5,B,250,pyspark dataframes and rdds

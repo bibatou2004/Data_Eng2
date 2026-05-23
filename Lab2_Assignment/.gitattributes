@@ -1,0 +1,15 @@
+# CSV files
+*.csv text eol=lf
+*.csv.snappy binary
+
+# Parquet
+*.parquet binary
+
+# Jupyter
+*.ipynb text diff=ipynb
+
+# Python
+*.py text eol=lf
+
+# Documentation
+*.md text eol=lf

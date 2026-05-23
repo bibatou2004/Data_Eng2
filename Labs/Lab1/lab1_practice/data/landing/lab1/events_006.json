@@ -1,0 +1,5 @@
+{"match_id": "match_006_00", "match_end_time": "2025-05-17T10:30:00Z", "game_type": "Fighting", "winning_team": "Team C", "match_duration_sec": 2601, "spectators": 44561}
+{"match_id": "match_006_01", "match_end_time": "2025-05-17T10:32:00Z", "game_type": "FPS", "winning_team": "Team D", "match_duration_sec": 2729, "spectators": 32072}
+{"match_id": "match_006_02", "match_end_time": "2025-05-17T10:34:00Z", "game_type": "Strategy", "winning_team": "Team D", "match_duration_sec": 3105, "spectators": 26059}
+{"match_id": "match_006_03", "match_end_time": "2025-05-17T10:36:00Z", "game_type": "FPS", "winning_team": "Team B", "match_duration_sec": 1566, "spectators": 16646}
+{"match_id": "match_006_04", "match_end_time": "2025-05-17T10:38:00Z", "game_type": "Strategy", "winning_team": "Team E", "match_duration_sec": 3553, "spectators": 18228}

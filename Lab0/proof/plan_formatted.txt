@@ -1,0 +1,8 @@
+Timestamp: 2025-12-07 13:27:30.373348
+
+=== Executed Plan ===
+AdaptiveSparkPlan isFinalPlan=false
++- HashAggregate(keys=[user_id#86], functions=[count(1), sum(price#88)], output=[user_id#86, n#108L, total#109])
+   +- Exchange hashpartitioning(user_id#86, 200), ENSURE_REQUIREMENTS, [plan_id=194]
+      +- HashAggregate(keys=[user_id#86], functions=[partial_count(1), partial_sum(price#88)], output=[user_id#86, count#121L, sum#122])
+         +- FileScan csv [user_id#86,price#88] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/bibawandaogo/data engineering 1/data/sample_sales.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<user_id:int,price:double>

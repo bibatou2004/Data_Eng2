@@ -1,0 +1,13 @@
+metric,value
+total_samples,10000
+n_features,5
+n_clusters_tested,4
+max_iterations,10
+n_stability_seeds,5
+default_num_partitions,12
+optimized_num_partitions,32
+silhouette_mean,0.9797
+silhouette_std,0.0000
+inertia_mean,739.03
+inertia_std,0.00
+avg_speedup,1.20x

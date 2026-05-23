@@ -1,0 +1,4 @@
+run_id,term,format,latency_ms,frequency,doc_count,parquet_size_kb,csv_size_kb,timestamp
+baseline,esports,parquet,347.94068336486816,5,5,1.505859375,0.5703125,2026-05-23T14:02:36.328557
+baseline,championship,parquet,98.33812713623047,2,2,1.505859375,0.5703125,2026-05-23T14:02:36.328557
+baseline,tournament,parquet,104.81429100036621,1,1,1.505859375,0.5703125,2026-05-23T14:02:36.328557

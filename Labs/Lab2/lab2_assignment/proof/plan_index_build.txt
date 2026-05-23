@@ -1,0 +1,10 @@
+=== INVERTED INDEX BUILD PLAN ===
+
+Query: groupBy(token).agg(collect_list(doc_ids), count(*))
+
+Details:
+- Input: Filtered tokens with doc_ids
+- Transformation: GroupBy token, collect_list doc_ids, count frequency
+- Output: token, doc_ids (array), freq (long)
+
+Plan détaillé affiché dans la sortie console ci-dessus.

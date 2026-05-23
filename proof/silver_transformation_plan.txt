@@ -1,0 +1,6 @@
+Timestamp: 2026-01-03 18:23:34.336595
+Plan physique de la couche Silver (Cleaning & Casting):
+*(1) Project [prev#101, curr#102, type#103, cast(n#104 as int) AS n#109]
++- *(1) Filter ((isnotnull(n#104) AND (cast(n#104 as int) > 0)) AND atleastnnonnulls(2, curr#102, cast(n#104 as int)))
+   +- *(1) ColumnarToRow
+      +- FileScan parquet [prev#101,curr#102,type#103,n#104] Batched: true, DataFilters: [isnotnull(n#104), (cast(n#104 as int) > 0), atleastnnonnulls(2, curr#102, cast(n#104 as int))], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/home/zettahorizon/projects/de1_wikipedia/data/bronze], PartitionFilters: [], PushedFilters: [IsNotNull(n)], ReadSchema: struct<prev:string,curr:string,type:string,n:string>

@@ -1,0 +1,21 @@
+=== PLAN BEFORE OPTIMIZATION (Default Partitioning) ===
+
+== Physical Plan ==
+* Project (3)
++- * Project (2)
+   +- * Scan ExistingRDD (1)
+
+
+(1) Scan ExistingRDD [codegen id : 1]
+Output [6]: [id#0, feature_0#1, feature_1#2, feature_2#3, feature_3#4, feature_4#5]
+Arguments: [id#0, feature_0#1, feature_1#2, feature_2#3, feature_3#4, feature_4#5], MapPartitionsRDD[4] at applySchemaToPythonRDD at NativeMethodAccessorImpl.java:0, ExistingRDD, UnknownPartitioning(0)
+
+(2) Project [codegen id : 1]
+Output [7]: [id#0, feature_0#1, feature_1#2, feature_2#3, feature_3#4, feature_4#5, UDF(struct(feature_0, feature_0#1, feature_1, feature_1#2, feature_2, feature_2#3, feature_3, feature_3#4, feature_4, feature_4#5)) AS features_raw#33]
+Input [6]: [id#0, feature_0#1, feature_1#2, feature_2#3, feature_3#4, feature_4#5]
+
+(3) Project [codegen id : 1]
+Output [8]: [id#0, feature_0#1, feature_1#2, feature_2#3, feature_3#4, feature_4#5, features_raw#33, UDF(features_raw#33) AS features#102]
+Input [7]: [id#0, feature_0#1, feature_1#2, feature_2#3, feature_3#4, feature_4#5, features_raw#33]
+
+

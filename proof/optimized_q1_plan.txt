@@ -1,0 +1,11 @@
+Timestamp: 2026-01-03 18:33:27.607520
+Duration: 5.38s
+Configuration: spark.sql.shuffle.partitions = 12
+Plan Optimisé Q1:
+AdaptiveSparkPlan isFinalPlan=false
++- Sort [total_clicks#226L DESC NULLS LAST], true, 0
+   +- Exchange rangepartitioning(total_clicks#226L DESC NULLS LAST, 12), ENSURE_REQUIREMENTS, [plan_id=596]
+      +- HashAggregate(keys=[curr#215], functions=[sum(n#217)], output=[curr#215, total_clicks#226L])
+         +- Exchange hashpartitioning(curr#215, 12), ENSURE_REQUIREMENTS, [plan_id=593]
+            +- HashAggregate(keys=[curr#215], functions=[partial_sum(n#217)], output=[curr#215, sum#234L])
+               +- FileScan parquet [curr#215,n#217] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/home/zettahorizon/projects/de1_wikipedia/data/silver], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<curr:string,n:int>

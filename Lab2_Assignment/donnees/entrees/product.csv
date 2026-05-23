@@ -1,0 +1,11 @@
+product_id,brand,category,product_name
+P001,Brand_A,Electronics,Laptop
+P002,Brand_A,Electronics,Headphones
+P003,Brand_B,Household,Blender
+P004,Brand_B,Household,Toaster
+P005,Brand_C,Sports,Running Shoes
+P006,Brand_C,Sports,Yoga Mat
+P007,Brand_D,Fashion,T-Shirt
+P008,Brand_D,Fashion,Jeans
+P009,Brand_E,Furniture,Chair
+P010,Brand_E,Furniture,Table

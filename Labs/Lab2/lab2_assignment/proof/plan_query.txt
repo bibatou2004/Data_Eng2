@@ -1,0 +1,5 @@
+=== QUERY EXECUTION PLAN ===
+
+Query: SELECT * FROM inverted_index WHERE token = 'esports'
+
+Plan détaillé affiché dans la sortie console ci-dessus.

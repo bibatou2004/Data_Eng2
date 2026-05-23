@@ -1,0 +1,5 @@
+{"match_id": "match_004_00", "match_end_time": "2025-05-17T10:20:00Z", "game_type": "MOBA", "winning_team": "Team B", "match_duration_sec": 1852, "spectators": 27380}
+{"match_id": "match_004_01", "match_end_time": "2025-05-17T10:22:00Z", "game_type": "FPS", "winning_team": "Team C", "match_duration_sec": 1380, "spectators": 13816}
+{"match_id": "match_004_02", "match_end_time": "2025-05-17T10:24:00Z", "game_type": "FPS", "winning_team": "Team D", "match_duration_sec": 2050, "spectators": 25031}
+{"match_id": "match_004_03", "match_end_time": "2025-05-17T10:26:00Z", "game_type": "FPS", "winning_team": "Team A", "match_duration_sec": 1354, "spectators": 16587}
+{"match_id": "match_004_04", "match_end_time": "2025-05-17T10:28:00Z", "game_type": "FPS", "winning_team": "Team C", "match_duration_sec": 1212, "spectators": 40336}

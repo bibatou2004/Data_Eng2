@@ -1,0 +1,31 @@
+project_name: "DE1_Wikipedia_Lakehouse"
+authors: ["YABIBA"]
+version: "1.0"
+
+paths:
+  # Input (Raw downloaded files)
+  raw_landing: "/home/zettahorizon/projects/de1_wikipedia/data/raw_landing"
+  # Lakehouse Layers
+  bronze: "/home/zettahorizon/projects/de1_wikipedia/data/bronze"
+  silver: "/home/zettahorizon/projects/de1_wikipedia/data/silver"
+  gold: "/home/zettahorizon/projects/de1_wikipedia/data/gold"
+  # Evidence & Logs
+  proof: "/home/zettahorizon/projects/de1_wikipedia/proof"
+  metrics: "/home/zettahorizon/projects/de1_wikipedia/project_metrics_log.csv"
+
+dataset:
+  name: "Wikipedia Clickstream Jan 2024"
+  # On met l'URL pour la traçabilité, même si vous l'avez déjà téléchargé
+  url: "https://dumps.wikimedia.org/other/clickstream/2024-01/clickstream-enwiki-2024-01.tsv.gz"
+  # Le schéma officiel du clickstream
+  schema_cols: ["prev", "curr", "type", "n"]
+
+slos:
+  freshness_minutes: 120  # Gold updated <= 2h after bronze
+  query_latency_p95_sec: 4 # Q1 latency <= 4s
+  storage_compression_ratio: 0.6 # Parquet size <= 60% of Raw
+
+layout:
+  # Partitionning strategy for Silver/Gold
+  partition_by: ["date"] 
+  # Note: Clickstream is monthly, we might synthesize a date or use 'type' for partitioning demonstration if needed.

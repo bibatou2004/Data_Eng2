@@ -1,0 +1,27 @@
+# Core dependencies
+pyspark>=3.5.0
+findspark>=2.0.1
+numpy>=1.23.0
+pandas>=1.5.0
+pyarrow>=12.0.0
+
+# Monitoring & Performance
+psutil>=5.9.0
+matplotlib>=3.7.0
+scipy>=1.9.0
+
+# Jupyter
+jupyter>=1.0.0
+ipython>=8.0.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Utilities
+python-dotenv>=0.21.0
+pyyaml>=6.0
+click>=8.0.0
+
+# Logging
+loguru>=0.6.0

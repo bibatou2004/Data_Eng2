@@ -1,0 +1,14 @@
+2025-12-07 21:46:42.402778
+
+AdaptiveSparkPlan isFinalPlan=false
++- TakeOrderedAndProject(limit=10, orderBy=[count#698L DESC NULLS LAST,token#697 ASC NULLS FIRST], output=[token#697,count#698L])
+   +- HashAggregate(keys=[token#697], functions=[count(1)], output=[token#697, count#698L])
+      +- Exchange hashpartitioning(token#697, 200), ENSURE_REQUIREMENTS, [plan_id=498]
+         +- HashAggregate(keys=[token#697], functions=[partial_count(1)], output=[token#697, count#764L])
+            +- Filter NOT (token#697 = )
+               +- Generate explode(split(lower(text#304), \s+, -1)), false, [token#697]
+                  +- InMemoryTableScan [text#304]
+                        +- InMemoryRelation [id#301, category#302, value#303, text#304], StorageLevel(disk, memory, deserialized, 1 replicas)
+                              +- Union
+                                 :- FileScan csv [id#301,category#302,value#303,text#304] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/bibawandaogo/data engineering 1/data/lab1_dataset_a.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<id:int,category:string,value:int,text:string>
+                                 +- FileScan csv [id#322,category#323,value#324,text#325] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/bibawandaogo/data engineering 1/data/lab1_dataset_b.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<id:int,category:string,value:int,text:string>

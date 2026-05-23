@@ -1,0 +1,17 @@
+=== LAB 2 INVERTED INDEX - SUMMARY ===
+
+Corpus Documents: 5
+Total Tokens (before filtering): 44
+Unique Tokens (after filtering): 28
+Parquet Size: 1.51 KB
+CSV Size: 0.57 KB
+Compression Ratio: 0.38x
+
+Average Query Latency: 183.70 ms
+
+Top Tokens:
+  1. esports: freq=5, docs=5
+  2. championship: freq=2, docs=2
+  3. launch: freq=1, docs=1
+  4. finals: freq=1, docs=1
+  5. title: freq=1, docs=1

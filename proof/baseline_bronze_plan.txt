@@ -1,0 +1,2 @@
+*(1) Project [_c0#59 AS prev#67, _c1#60 AS curr#68, _c2#61 AS type#69, _c3#62 AS n#70]
++- FileScan csv [_c0#59,_c1#60,_c2#61,_c3#62] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/zettahorizon/projects/de1_wikipedia/data/raw_landing/clicks..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<_c0:string,_c1:string,_c2:string,_c3:string>

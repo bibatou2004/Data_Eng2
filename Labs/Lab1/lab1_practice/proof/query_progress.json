@@ -1,0 +1,64 @@
+{
+  "id": "2340ac8b-3188-4dca-88e1-adc3274bc457",
+  "runId": "0c22854a-d950-4002-93fd-fb80f6c04023",
+  "name": null,
+  "timestamp": "2026-04-23T08:39:20.000Z",
+  "batchId": 6,
+  "batchDuration": 2441,
+  "durationMs": {
+    "triggerExecution": 2441,
+    "queryPlanning": 16,
+    "getBatch": 6,
+    "commitOffsets": 21,
+    "latestOffset": 20,
+    "addBatch": 2354,
+    "walCommit": 19
+  },
+  "eventTime": {
+    "min": "2025-05-17T10:15:00.000Z",
+    "avg": "2025-05-17T10:19:00.000Z",
+    "watermark": "2025-05-17T10:38:00.000Z",
+    "max": "2025-05-17T10:23:00.000Z"
+  },
+  "stateOperators": [
+    {
+      "operatorName": "stateStoreSave",
+      "numRowsTotal": 4,
+      "numRowsUpdated": 4,
+      "numRowsRemoved": 0,
+      "allUpdatesTimeMs": 346,
+      "allRemovalsTimeMs": 456,
+      "commitTimeMs": 16826,
+      "memoryUsedBytes": 91264,
+      "numRowsDroppedByWatermark": 0,
+      "numShufflePartitions": 200,
+      "numStateStoreInstances": 200,
+      "customMetrics": {
+        "stateOnCurrentVersionSizeBytes": 25056,
+        "loadedMapCacheHitCount": 2400,
+        "loadedMapCacheMissCount": 0
+      }
+    }
+  ],
+  "sources": [
+    {
+      "description": "FileStreamSource[file:/home/bibawandaogo/Data_Engineering2/Labs/Lab1/lab1_practice/data/landing/lab1]",
+      "startOffset": "{\"logOffset\":5}",
+      "endOffset": "{\"logOffset\":6}",
+      "latestOffset": "None",
+      "numInputRows": 5,
+      "inputRowsPerSecond": 0.5000500050005,
+      "processedRowsPerSecond": 2.048340843916428,
+      "metrics": {}
+    }
+  ],
+  "sink": {
+    "description": "FileSink[file:/home/bibawandaogo/Data_Engineering2/Labs/Lab1/lab1_practice/outputs/lab1/stream_sink]",
+    "numOutputRows": -1,
+    "metrics": {}
+  },
+  "numInputRows": 5,
+  "inputRowsPerSecond": 0.5000500050005,
+  "processedRowsPerSecond": 2.048340843916428,
+  "observedMetrics": {}
+}

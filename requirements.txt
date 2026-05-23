@@ -1,0 +1,24 @@
+# Data Engineering Lab 2 Practice
+# PySpark & Data Processing
+
+# Core
+pyspark>=3.4.0
+pandas>=1.5.0
+numpy>=1.23.0
+
+# Utilities
+python-dateutil>=2.8.2
+
+# Jupyter (optionnel)
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Format & compression
+pyarrow>=10.0.0
+
+# Optional: pour Postgres si besoin
+psycopg2-binary>=2.9.0
+
+# Quality & Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
