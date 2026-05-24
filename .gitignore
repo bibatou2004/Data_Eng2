@@ -4,3 +4,13 @@ outputs/
 _spark_metadata/
 checkpoint/
 *.parquet
+# --- DE2 Final Project ---
+# Ignorer les données brutes et générées
+Project/data/
+Project/outputs/
+
+# Ignorer les dossiers temporaires créés par Spark et Jupyter
+Project/spark-warehouse/
+Project/metastore_db/
+Project/derby.log
+Project/.ipynb_checkpoints/

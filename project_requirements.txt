@@ -1,0 +1,14 @@
+# PySpark Core & MLlib
+pyspark==3.5.1
+numpy>=1.23.0
+pandas>=1.5.0
+
+# Format Parquet & Optimisation Spark
+pyarrow>=10.0.0
+
+# Environnement de travail (Notebook)
+jupyterlab>=3.0.0
+ipykernel>=6.0.0
+
+# Gestion de la configuration du projet
+pyyaml>=6.0
