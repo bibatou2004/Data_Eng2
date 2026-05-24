@@ -1,0 +1,8 @@
+run_id,stage,task,metric_name,metric_value,notes,timestamp
+run_1,ETL,Footprint,storage_reduction_mb,459.19,Taille gagnée grâce au format Parquet et nettoyage,2026-05-24 15:28:55
+run_1,Streaming,Latency,window_duration_min,5.0,Fenêtrage temporel respecté,2026-05-24 15:56:11
+run_1,NLP,Benchmark,query_latency_gg_ms,229.27,Temps de réponse index inversé pour 'gg',2026-05-24 15:56:11
+run_1,NLP,Benchmark,query_latency_push_ms,68.13,Temps de réponse index inversé pour 'push',2026-05-24 15:56:11
+run_1,ML,Clustering,best_silhouette_score,0.4523,Meilleur clustering trouvé pour K=3,2026-05-24 15:56:11
+run_1,ML,Optimization,partition_speedup_seconds,1.6,Gain de temps obtenu avec 8 partitions,2026-05-24 15:56:11
+run_1,LLM,Readiness,eligible_text_rows,210913,Lignes de chat prêtes pour injection LLM,2026-05-24 15:56:11

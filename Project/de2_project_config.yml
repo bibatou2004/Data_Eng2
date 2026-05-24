@@ -1,0 +1,51 @@
+# Track sélectionnée
+track: "A_Esports"
+
+# Objectifs de performance (SLOs)
+slos:
+  pipeline_latency_max_minutes: 10
+  streaming_latency_max_seconds: 30
+  text_query_latency_max_seconds: 2
+  storage_reduction_target_percent: 40
+  clustering_min_silhouette: 0.25
+  llm_quality_pass_percent: 80
+
+# Chemins d'accès (Paths)
+paths:
+  raw_csv_glob: "data/raw/*.csv"
+  bronze: "outputs/project/bronze"
+  silver: "outputs/project/silver"
+  gold: "outputs/project/gold"
+  streaming_landing: "data/project/landing/"
+  text_corpus: "outputs/project/silver"
+  proof: "proof/"
+
+# Organisation physique des données (Gold)
+layout:
+  partition_by: 
+    - "year"
+    - "month"
+
+# Configuration du Streaming
+streaming:
+  watermark: "10 minutes"
+  window_duration: "5 minutes"
+  trigger_interval: "30 seconds"
+
+# Configuration du NLP
+text:
+  query_terms: 
+    - "gg"
+    - "push"
+    - "defend"
+
+# Configuration du Clustering
+clustering:
+  k_values: [3, 5, 7]
+  seeds: [42, 123, 456]
+  features_cols: ["kills", "deaths", "gold_per_min"]
+
+# Configuration LLM Data Readiness
+llm:
+  min_text_length: 20
+  language: "en"

@@ -1,0 +1,47 @@
+== Physical Plan ==
+AdaptiveSparkPlan (8)
++- Project (7)
+   +- InMemoryTableScan (1)
+         +- InMemoryRelation (2)
+               +- * Project (6)
+                  +- * Project (5)
+                     +- * ColumnarToRow (4)
+                        +- Scan parquet  (3)
+
+
+(1) InMemoryTableScan
+Output [2]: [account_id#3746L, features#4089]
+Arguments: [account_id#3746L, features#4089]
+
+(2) InMemoryRelation
+Arguments: [account_id#3746L, features#4089], CachedRDDBuilder(org.apache.spark.sql.execution.columnar.DefaultCachedBatchSerializer@291c219d,StorageLevel(disk, memory, deserialized, 1 replicas),*(1) Project [account_id#3746L, UDF(raw_features#3901) AS features#4089]
++- *(1) Project [account_id#3746L, UDF(struct(kills_double_VectorAssembler_fc212166f0f0, cast(kills#3753 as double), deaths_double_VectorAssembler_fc212166f0f0, cast(deaths#3754 as double), gold_per_min_double_VectorAssembler_fc212166f0f0, cast(gold_per_min#3751 as double))) AS raw_features#3901]
+   +- *(1) ColumnarToRow
+      +- FileScan parquet [account_id#3746L,gold_per_min#3751,kills#3753,deaths#3754] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/mnt/c/Users/louis/Documents/DE2_Projet/Data_Eng2/Project/outputs..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<account_id:bigint,gold_per_min:int,kills:int,deaths:int>
+,None)
+
+(3) Scan parquet 
+Output [4]: [account_id#3746L, gold_per_min#3751, kills#3753, deaths#3754]
+Batched: true
+Location: InMemoryFileIndex [file:/mnt/c/Users/louis/Documents/DE2_Projet/Data_Eng2/Project/outputs/project/silver/players_enriched]
+ReadSchema: struct<account_id:bigint,gold_per_min:int,kills:int,deaths:int>
+
+(4) ColumnarToRow [codegen id : 1]
+Input [4]: [account_id#3746L, gold_per_min#3751, kills#3753, deaths#3754]
+
+(5) Project [codegen id : 1]
+Output [2]: [account_id#3746L, UDF(struct(kills_double_VectorAssembler_fc212166f0f0, cast(kills#3753 as double), deaths_double_VectorAssembler_fc212166f0f0, cast(deaths#3754 as double), gold_per_min_double_VectorAssembler_fc212166f0f0, cast(gold_per_min#3751 as double))) AS raw_features#3901]
+Input [4]: [account_id#3746L, gold_per_min#3751, kills#3753, deaths#3754]
+
+(6) Project [codegen id : 1]
+Output [2]: [account_id#3746L, UDF(raw_features#3901) AS features#4089]
+Input [2]: [account_id#3746L, raw_features#3901]
+
+(7) Project
+Output [3]: [account_id#3746L, features#4089, UDF(features#4089) AS prediction#5428]
+Input [2]: [account_id#3746L, features#4089]
+
+(8) AdaptiveSparkPlan
+Output [3]: [account_id#3746L, features#4089, prediction#5428]
+Arguments: isFinalPlan=false
+
